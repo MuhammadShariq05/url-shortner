@@ -1,5 +1,5 @@
-const mongoose = require("mongooose");
-const { default: mongoose } = require("mongoose");
+const mongoose = require("mongoose");
+// const { default: mongoose } = require("mongoose");
 
 const urlSchema = new mongoose.Schema(
   {
