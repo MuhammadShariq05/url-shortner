@@ -10,6 +10,10 @@ async function handleGenerateNewShortURL(req, res){
     shortId: shortId,
     redirectURL: body.url,
     visitHistory: [],
-  })
+  });
   return res.json({id: shortId});
+}
+
+module.exports = {
+  handleGenerateNewShortURL,
 }
