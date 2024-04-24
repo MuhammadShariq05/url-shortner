@@ -12,11 +12,14 @@ async function handleGenerateNewShortURL(req, res) {
       redirectURL: body.url,
       visitHistory: [],
     });
+    
     return res.render("home", { id: shortId })
   } catch (error) {
     return res.status(500).json({ msg: "Internal Server Error" });
   }
 }
+
+console.log("post request recived");
 
 async function makeIdFromShortID(req, res) {
   const shortId = req.params.shortId;

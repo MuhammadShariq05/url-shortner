@@ -12,13 +12,14 @@ connectToMongo("mongodb://127.0.0.1:27017/short-url").then(() =>
 );
 
 app.set("view engine", "ejs");
-app.set("views", path.join("./views"));
+app.set("views", path.resolve("./views"));
 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.urlencoded({ extented: false }));
+
 
 app.use("/url", urlroute);
-app.use("/", staticRoute);
+app.use("/", staticRoute); 
 app.get("/:shortId", urlroute);
 
 app.listen(PORT, () => {
