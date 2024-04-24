@@ -12,7 +12,7 @@ async function handleGenerateNewShortURL(req, res) {
       redirectURL: body.url,
       visitHistory: [],
     });
-    return res.json({ id: shortId });
+    return res.render("home", { id: shortId })
   } catch (error) {
     return res.status(500).json({ msg: "Internal Server Error" });
   }
