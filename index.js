@@ -15,6 +15,8 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
 app.use(express.json());
+app.use(express.urlencoded({extented: false}));
+
 app.use("/url", urlroute);
 app.use("/", staticRoute);
 app.get("/:shortId", urlroute);

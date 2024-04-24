@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shorty Url</title>
-</head>
-<body>
-  <hi>Homepage</hi>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shorty Url</title>
+    <style>
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Url shortner</h1>
+    <form method='POST' action="/url">
+      <label>Enter your orignal URL</label>
+      <input type="text" name:="url" placeholder="https://example.com"/>
+      <button type="submit">Generate</button>
+    </form>
+  </body>
 </html>
